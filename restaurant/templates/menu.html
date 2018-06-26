@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+    <p>本餐廳共有{{ foods|length }}道菜</p>
+    {% for food in foods %}
+        <h3>第{{ forloop.counter }}道食物</h3>
+        <ul>
+            <li>食物的名稱：{{ food.name }}</li>
+            <li>食物的價格：{{ food.price }}</li>
+            <li>食物的說明：{{ food.comment }}</li>
+            <li>食物會辣？：
+                {% if food.flavor == '辣' %}辣
+                {% elif food.flavor == '酸' %}酸
+                {% elif food.flavor == '甜' %}甜
+                {% elif food.flavor == '苦' %}苦
+                {% else %}沒什麼味道
+                {% endif %}</li>
+        </ul>
+    {% endfor %}
+<br></br>
+    <!--
+    {% for key,value in items %}
+        {{ key }} = {{ value }}
+    {% endfor %}
+    <br>
+    {% for item in items %}
+        {{ item.0 }} = {{ item.1 }}
+    {% endfor %}
+    -->
+</body>
+</html>
