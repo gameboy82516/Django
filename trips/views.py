@@ -29,8 +29,7 @@ def post(request):
         post_list = Post.objects.all()
         return render(request,
         'post.html',
-        {'post_list': post_list}) #從資料庫取得全部的post並回傳至home.html這個template
-
+        {'post_list': post_list})
 
 def post_detail(request, id):
         post = Post.objects.get(id=id)

@@ -7,7 +7,7 @@ class Restaurant(models.Model):
     phone_number = models.CharField(max_length=15)
     address = models.CharField(max_length=50, blank=True)
 
-    def  __str__(self): #It's Django用「 __unicode__」1會失敗
+    def  __str__(self):
         """
         :returns: name string
         """
@@ -31,5 +31,5 @@ class Food(models.Model):
 
         """Meta: attribute, options"""
 
-        ordering = ['price'] # 若某項特性是排序的優先選擇(如總會以price為優先序)，需重複使用objects.order_by('price')。可改使用Meta
+        ordering = ['price']
 
