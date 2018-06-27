@@ -14,10 +14,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#__file__指的是當下命令檔的檔名
-# os.path.abspath(__file__)指的是當下命令檔"檔案的絕對路徑(包含檔案)"
-# os.path.dirname(__file__)指的是當下命令檔的"路徑"
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -55,12 +51,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'Django.urls' #根URL配置檔
+ROOT_URLCONF = 'Django.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')] #模板路徑，以專案路徑(BASE_DIR)串接模板目錄名稱
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
